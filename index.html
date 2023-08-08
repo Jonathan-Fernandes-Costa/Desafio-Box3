@@ -18,9 +18,15 @@
     <section class="p-4">
         <section class="p-3 border border-2 border-dark">
             <div class="row">
-                <div class="col-12">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userForm">Adicionar Contato<i
-                            class="p-2 bi bi-person-circle"></i></button>
+                <div class="col-12 buttons">
+                    
+                    <button class="btn btn-info"><i class="bi bi-person-lines-fill"> Listar todos os contatos</i></button>
+                    <button class="btn btn-secondary"><i class="bi bi-search"> Procurar um contato</i></button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#userForm">Adicionar um Contato<i
+                            class="p-2 bi bi-person-circle"></i>
+                    </button> 
+                        <button class="btn btn-primary"><i class="bi bi-pencil-square"> Atualizar um Contato</i></button>
+                        <button class="btn btn-danger"><i class="bi bi-trash"> Deletar um Contato</i></button>
                 </div>
             </div>
             <div class="row">
@@ -34,7 +40,6 @@
                                 <th>Email</th>
                                 <th>Ativo</th>
                                 <th>Data de Nascimento</th>
-                                <th>Opções</th>
                             </tr>
                         </thead>
                         <tbody id="dados">
@@ -45,11 +50,6 @@
                                 <td>jonathanfernandes638@gmail.com</td>
                                 <td>true</td>
                                 <td>02/02/2004</td>
-                                <td>
-                                    <button class="btn btn-success"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
                             </tr>
                             <tr>
                                 <td>1</td>
@@ -58,11 +58,6 @@
                                 <td>jonathanfernandes638@gmail.com</td>
                                 <td>true</td>
                                 <td>02/02/2004</td>
-                                <td>
-                                    <button class="btn btn-success"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
                             </tr>
                             <tr>
                                 <td>1</td>
@@ -71,11 +66,6 @@
                                 <td>jonathanfernandes638@gmail.com</td>
                                 <td>true</td>
                                 <td>02/02/2004</td>
-                                <td>
-                                    <button class="btn btn-success"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
                             </tr>
                         </tbody>
                     </table>

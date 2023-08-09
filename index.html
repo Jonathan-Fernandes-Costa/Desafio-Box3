@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- App.js -->
+    <script src="app.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -85,10 +86,6 @@
 
                     <form action="#" id="myForm">
                         <div class="card">
-                            <!-- <label for="imginput" class="upload">
-                                <input type="file" name="" id="imgInput">
-                                <i class="bi bi-plus-circle-dotted"></i>
-                            </label> -->
                             <img src="./image/box.png" alt="" width="200" height="200">
                             <p style="margin: 5px; font-size: 15px;
                             font-weight: 500;">Cadastro de Contato BOX³</p>
@@ -109,8 +106,7 @@
                             </div>
                             <div class="options">
                                 <label for="ativo">Status:</label>
-                                <input type="radio" name="ativo" value="ativo"> Ativo
-                                <input type="radio" name="ativo" value="desativo"> Desativo
+                                <input type="checkbox" id="status"> Ativo
                             </div>
                             <div>
                                 <label for="data">Data de Nascimento:</label>
@@ -120,7 +116,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" form="myForm" class="btn btn-primary submit">Criar</button>
+                    <button type="submit" form="myForm" class="btn btn-primary submit" onclick="postContatos()">Criar</button>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 const urlApi = "https://api.box3.work/api/Contato/6c39d089-d593-44b5-8b7b-acad269932a8"
 
 async function getAllContatos() {
-    fetch(urlApi)
+    await fetch(urlApi)
         .then(response => response.json())
         .then(data => {
             // Processar os dados da API e exibir na tabela
@@ -40,7 +40,7 @@ async function getAllContatos() {
 }
 async function getContatobyId() {
     let id = document.getElementById("id").value;
-    fetch(urlApi + "/" + id)
+    await fetch(urlApi + "/" + id)
         .then(response => response.json())
         .then(data => {
             // Processar os dados da API e exibir na tabela
@@ -96,7 +96,7 @@ async function postContatos() {
         },
         body: JSON.stringify(infos)
     }
-    fetch(urlApi, request)
+    await fetch(urlApi, request)
         .then(res => res.json())
         .then(resData => {
             console.log("Resposta da API:", resData);
@@ -104,6 +104,8 @@ async function postContatos() {
         .catch(error => {
             console.error("Erro na requisição:", error);
         });
+        document.getElementById("myForm").reset();
+    getAllContatos();
 }
 async function putContatobyId() {
     let name = document.getElementById("namePUT").value;
@@ -127,7 +129,7 @@ async function putContatobyId() {
         body: JSON.stringify(infos)
     }
     let id = document.getElementById("idPUT").value;
-    fetch(urlApi + "/" + id, request)
+    await fetch(urlApi + "/" + id, request)
         .then(res => res.json())
         .then(resData => {
             console.log("Resposta da API:", resData);
@@ -135,6 +137,8 @@ async function putContatobyId() {
         .catch(error => {
             console.error("Erro na requisição:", error);
         });
+        document.getElementById("myForm").reset();
+    getAllContatos();
 }
 function handleDelete(){
     const confirmation = window.confirm("Tem certeza que deseja apagar?");
@@ -151,7 +155,7 @@ async function deleteContatobyId() {
         method: 'DELETE'
     };
     console.log(urlApi + "/" + id)
-    fetch(urlApi + "/" + id, requestOptions)
+    await fetch(urlApi + "/" + id, requestOptions)
     .then(res => res.json())
         .then(resData => {
             console.log("Resposta da API Deletar:", resData);
@@ -159,4 +163,6 @@ async function deleteContatobyId() {
         .catch(error => {
             console.error("Erro na requisição:", error);
         });
+        document.getElementById("myForm").reset();
+    getAllContatos();
 }

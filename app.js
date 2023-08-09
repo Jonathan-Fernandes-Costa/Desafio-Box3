@@ -136,3 +136,27 @@ async function putContatobyId() {
             console.error("Erro na requisição:", error);
         });
 }
+function handleDelete(){
+    const confirmation = window.confirm("Tem certeza que deseja apagar?");
+
+      if (confirmation) {
+        deleteContatobyId()
+      } else {
+        console.log("Ação de exclusão cancelada.");
+      }
+}
+async function deleteContatobyId() {
+    let id = document.getElementById("idDelete").value;
+    let requestOptions = {
+        method: 'DELETE'
+    };
+    console.log(urlApi + "/" + id)
+    fetch(urlApi + "/" + id, requestOptions)
+    .then(res => res.json())
+        .then(resData => {
+            console.log("Resposta da API Deletar:", resData);
+        })
+        .catch(error => {
+            console.error("Erro na requisição:", error);
+        });
+}

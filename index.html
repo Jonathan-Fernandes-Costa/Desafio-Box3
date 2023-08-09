@@ -24,7 +24,7 @@
                     <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#search"><i class="bi bi-search"> Procurar um contato</i></button>
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#userForm"><i class="p-2 bi bi-person-circle">Adicionar um contato</i></button> 
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateForm"><i class="bi bi-pencil-square"> Atualizar um contato</i></button>
-                    <button class="btn btn-danger"><i class="bi bi-trash"> Deletar um contato</i></button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"> Deletar um contato</i></button>
                 </div>
             </div>
             <div class="row">
@@ -172,7 +172,38 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" form="myForm" class="btn btn-primary submit" onclick="putContatobyId()">Criar</button>
+                    <button type="submit" form="myForm" class="btn btn-primary submit" onclick="putContatobyId()">Atualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal de Deletar-->
+    <div class="modal fade" id="delete">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Deletar Contato</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="#" id="myForm">
+                        <div class="card">
+                            <img src="./image/box.png" alt="" width="200" height="200">
+                            <p style="margin: 5px; font-size: 15px;
+                            font-weight: 500;">Deletar Contato BOX³</p>
+                        </div>
+
+                        <div class="inputField">
+                            <div>
+                                <label for="id">Digite o Id:</label>
+                                <input type="number" name="" id="idDelete">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="myForm" class="btn btn-primary submit" onclick="deleteContatobyId()">Deletar</button>
                 </div>
             </div>
         </div>
